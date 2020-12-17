@@ -1,0 +1,147 @@
+h1 {
+	color : black;
+	font-family: Times New Roman;
+	font : bold;
+	background-color : Img/Restoran.jpg;
+	line-height : 50px;
+	padding :20px;
+	border-radius : 20px;
+}
+.wrap {
+	width: 650px;
+	margin:10px auto;
+}
+
+
+ 
+nav.menu ul {
+	color:#fff;
+	list-style: none;
+	float:left;
+	padding:0;
+	width: 650px;
+	margin:0 0 0;
+	background: #000000;
+}
+ 
+nav.menu ul li {
+	margin:10;
+	float:left;
+}
+ 
+nav.menu ul a {
+	padding:25px;
+	display:block;
+	font-weight:600;
+	font-size: 25px;
+	color:#fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align : center;
+}
+ 
+.sidebar {
+	float:right;
+	width:300px;
+}
+ 
+ 
+.sidebar .widget h2 {
+	padding:0;
+	margin:0 0 15px;
+	color:#3498db;
+	font-size: 28px;
+	font-weight:675;
+	text-transform: uppercase;
+}
+ 
+.sidebar .widget p {
+	font-size: 20px;
+}
+
+.sidebar .widget a{
+    font-size: 20pt;
+    .blog {
+        float:left;
+    }
+     
+    .menu1 {
+        width:800px;
+        padding:25px;
+        margin:25px auto;
+        background: #fff;
+        border:1px solid #dedede;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    }
+     
+    .menu1 img {
+        min-width: 200px;
+        margin:0 0 25px -25px;
+        max-width: 200px;
+    }
+     
+    .menu1 h1 {
+        padding:0;
+        margin:5 0 15px;
+        font-weight: normal;
+        color: #666;
+        font-family: Georgia;
+    }
+     
+    
+     
+    .menu2 {
+        width:600px;
+        padding:25px;
+        margin:25px auto;
+        background: #fff;
+        border:1px solid #dedede;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    }
+    
+    .menu2 img {
+        min-width: 200px;
+        margin:5 0 25px -25px;
+        max-width: 200px;
+    }
+     
+    .menu2 h1 {
+        padding:0;
+        margin:0 0 15px;
+        font-weight: normal;
+        color: #666;
+        font-family: Georgia;
+    }
+     
+     
+    .menu3 {
+        width:600px;
+        padding:25px;
+        margin:25px auto;
+        background: #fff;
+        border:1px solid #dedede;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+        box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+    }
+    
+    .menu3 img {
+        min-width: 200px;
+        margin:5 0 25px -25px;
+        max-width: 200px;
+    }
+     
+    .menu3 h1 {
+        padding:0;
+        margin:0 0 15px;
+        font-weight: normal;
+        color: #666;
+        font-family: Georgia;
+    }
+     
+    
+    

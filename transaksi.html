@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Waroeng Kampung</title>
+    <script src="jquery-3.5.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/transaksi.css" />
+	<script>
+            var menu = ["12k", "15k", "7", "5", "8"];
+            
+            function form_process() {
+                var harga_makanan = 0;
+                var diskon = 0;
+                var id = document.getElementById('id').value;
+                var nama_customer= document.getElementById('nama_customer').value;
+                var member = document.querySelector('input[name = member]:checked').value;
+                var menu = document.getElementById('menu').value;
+                var jumlah = document.getElementById('jumlah').value;
+                if (menu == "12k") {
+                    harga_makanan = 12000;
+                } else if (menu == "15k") {
+                    harga_makanan = 15000;
+                } else if (menu == "7k") {
+                    harga_makanan = 7000;
+                }else if (menu == "5") {
+                    harga_makanan = 5000;
+                }else if (menu == "8K") {
+                    harga_makanan
+                } 
+
+                if (member == 'Member') {
+                    if (jumlah == 1) {
+                        diskon = harga_makanan * 0.05;
+                    } else if (jumlah <= 3) {
+                        diskon = harga_makanan * 0.07;
+                    } else {
+                        diskon = harga_makanan * 0.10;
+                    }
+                } else if(member == 'Non Member'){
+                    if (jumlah <= 3) {
+                        diskon = 0;
+                    } else if (jumlah <= 5) {
+                        diskon = (harga_makanan * jumlah) * 0.05;
+                    } else {
+                        diskon = harga_makanan * 0.05;
+                    }
+                }
+
+                total = (harga_makanan * jumlah) - diskon;
+                var par = document.createElement("h4")
+                var node = document.createTextNode(
+					"[ID : " + id + "]" + 
+					" [Atas Nama : " + nama_customer + "]" +
+					" [Member : " + member + "]" +
+					" [TOTAL BAYAR : " + total + "]"
+					
+                )
+                par.appendChild(node)
+                document.getElementById("hasil_submit").appendChild(par)
+            }
+        </script>
+  </head>
+  <body>
+  				      <nav id="nav">
+				        <ul>
+						<img src="img/restoran.jpg" width="70px" height="70px" align="center">
+						<br>
+				          <li><a href="home.html">Home</a></li>
+				          <li><a href="transaksi.html">Transaksi</a></li>
+				          <li><a href="datadiri.html">Biodata Diri</a></li>
+				          <li><a href="profilrestoran.html">Waroeng Kampung</a></li>					          		          
+				        </ul>
+				      </nav> <center>
+					  <h2>Transaksi</H2>
+					  <br>  	
+					<label for="id">ID Pembeli</label><br>
+                    <input type="text" id="id" name="id" required><br>
+                    <label for="nama_customer">Nama Pembeli</label><br>
+                    <input type="text" id="nama_customer" name="nama_customer" required><br>
+					<br>
+                    <label for="member">Member ? </label><br><br>
+                    <input type="radio" id="member" name="member" value="Member" required>&nbsp;<label>Member</label>
+                    <input type="radio" id="member" name="member" value="Non Member" required>&nbsp; <label>Non Member</label><br> <br>
+                    <label for="menu">Nama Makanan</label><br><br>
+                    <select id="menu" name="menu">
+                        <option value="12k">Sate Ayam : Rp. 12.000,-</option>
+						<option value="15k">Sate Ayam Lontong : Rp. 15.000,-</option>
+						<option value="7k">Nasi Pecel : Rp. 7.000,-</option>
+                        <option value="5k">Ronde : Rp. 5.000,-</option>
+						<option value="8k">Jagung Bakar : Rp. 8.000,-</option>
+                    </select><br><br>
+                    <label for="jumlah">Jumlah</label><br><br>
+                    <input type="number" id="jumlah" name="jumlah" required><br><br>
+                    <button type="submit" id="submit" name="submit" class="button" onclick="form_process()">Submit</button>     
+					<br>
+                    <div id="hasil_submit"></div>
+					</center>
+			  <div class="footer">
+</div>
+  </body>
+</html>
